@@ -15,6 +15,7 @@ services:
       - ./notebooks:/workspace
       - ./src:/app/src
       - ./storage:/data
+      - ./metastore:/opt/spark/metastore 
     networks:
       - spark-net
 
@@ -69,6 +70,7 @@ services:
       - ./notebooks:/workspace
       - ./src:/app/src
       - ./storage:/data
+      - ./metastore:/opt/spark/metastore 
     depends_on:
       - spark-master
     networks:
