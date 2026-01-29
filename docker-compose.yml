@@ -64,6 +64,7 @@ services:
     command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/workspace
     ports:
       - "8888:8888"
+      - "4040-4045:4040-4045"  # expose Spark driver UI ports
     environment:
       - SPARK_MASTER=spark://spark-master:7077
     volumes:
